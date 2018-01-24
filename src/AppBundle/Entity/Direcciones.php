@@ -22,12 +22,19 @@ class Direcciones
      */
     private $id;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=255)
-     */
-    private $name;
+        /**
+         * @var string
+         *
+         * @ORM\Column(name="name", type="string", length=255)
+         */
+        private $name;
+
+            /**
+             * @var string
+             *
+             * @ORM\Column(name="nombre", type="string", length=255)
+             */
+            private $nombre;
 
 
     // ...
@@ -101,7 +108,8 @@ class Direcciones
         {
             return $this->usuarios;
         }
-        public function __toString(){
+        public function __toString()
+        {
           return $this ->name;
         }
 }
